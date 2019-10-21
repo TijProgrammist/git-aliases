@@ -67,6 +67,16 @@ Example:
 git qfetch
 ```
 
+#### Quick commit with comment and push
+```bash 
+git config --global --replace-all alias.qcom "!f() { export remote_name=`git firstremote`; export branch_name=`git rev-parse --abbrev-ref HEAD`; git commit -m \"$\"; git push $remote_name $branch_name; }; f"
+```
+
+Example:
+```bash 
+git qcomm "init commit"
+```
+
 #### Quick fixmerge: commit with comment "fix merge" and push
 ```bash 
 git config --global --replace-all alias.fixmerge "!f() { export remote_name=`git firstremote`; export branch_name=`git rev-parse --abbrev-ref HEAD`; git commit -m \"fix merge\"; git push $remote_name $branch_name; }; f"
