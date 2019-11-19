@@ -69,7 +69,7 @@ git qfetch
 
 #### Quick commit with comment and push
 ```bash 
-git config --global --replace-all alias.qcom "!f() { export remote_name=`git firstremote`; export branch_name=`git rev-parse --abbrev-ref HEAD`; git commit -m \"$\"; git push $remote_name $branch_name; }; f"
+git config --global --replace-all alias.qcom "!f() { export remote_name=`git firstremote`; export branch_name=`git rev-parse --abbrev-ref HEAD`; git commit -m \"$1\"; git push $remote_name $branch_name; }; f"
 ```
 
 Example:
